@@ -3,7 +3,7 @@ MfxPlugins
 
 ### About
 
-This is a set of simple [Open Mesh Effect](http://openmesheffect.org/) plugins. They can be used in any Digital Content Creation tool able to load Open Mesh Effect plug-ins, for instance [this branch of Blender](https://github.com/eliemichel/OpenMeshEffectForBlender).
+This is a set of simple [OpenMfx](http://openmesheffect.org/) plugins. They can be used in any Digital Content Creation tool able to load OpenMfx plug-ins, for instance [this branch of Blender](https://github.com/eliemichel/OpenMfxForBlender).
 
 ### Downloading
 
@@ -23,8 +23,6 @@ cd build
 cmake ..
 ```
 
-Alternatively, you can run one of the `build-something` scripts.
-
 Once CMake has run, you can build the project using your favorite IDE or with the following command line in the `build` directory:
 
 ```
@@ -35,7 +33,7 @@ cmake --build . --config Debug
 
 The output of the build is not an executable. It is a set of OpenFX plug-ins called `MfxSomething.ofx`. They are created within the `build` directory, in `src` or `src/Debug` or `src/Release` or something similar depending on your compiler.
 
-You can open this plug-in in any Open Mesh Effect host, for instance the [Open Mesh Effect for Blender branch](https://github.com/eliemichel/OpenMeshEffectForBlender) using an *Open Mesh Effect modifier*.
+You can open this plug-in in any Open Mesh Effect host, for instance the [Open Mesh Effect for Blender branch](https://github.com/eliemichel/OpenMfxForBlender) using an *OpenMfx modifier* or an *OpenMfx Geometry Node*.
 
 ### License
 
@@ -44,7 +42,7 @@ This software as a whole is released under the terms of the MIT License.
 ```
 MfxPlugins is a set of simple Open Mesh Effect plug-ins.
 
-Copyright (c) 2019 -- Élie Michel <elie.michel@exppad.com>
+Copyright (c) 2019-2022 -- Élie Michel <elie.michel@exppad.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to

@@ -34,6 +34,8 @@
 // always find the quaried point itself, and is not idempotent while it should
 // (ie ensure that equivalent(equivalent(p)) = equivalent(p) for any p)
 
+using Real = KDTree::Real;
+
 /**
  * Squared euclidian distance between the roots of two trees
  */
@@ -49,7 +51,7 @@ static inline Real dist(struct kd_node_t *a, struct kd_node_t *b)
  * Swap node values only (not node children)
  */
 static inline void swap(struct kd_node_t *x, struct kd_node_t *y) {
-    Real *tmp = x->p;
+    char *tmp = x->p;
     x->p = y->p;
     y->p = tmp;
 }
@@ -160,13 +162,13 @@ static void print_aux(struct kd_node_t *root, int offset = 0)
 	print_aux(root->right, offset + 1);
 }
 
-KDTree::KDTree(int point_count, Real *point_data, int stride)
+KDTree::KDTree(int point_count, char *point_data, int stride)
     : m_point_data(point_data)
 	, m_nodes(point_count)
     , m_stride(stride)
 {
     for (int i = 0 ; i < point_count ; ++i) {
-        m_nodes[i].p = point_data + m_stride * i;
+        m_nodes[i].p = m_point_data + m_stride * i;
     }
     m_root = make_tree(m_nodes.data(), static_cast<int>(m_nodes.size()));
 }

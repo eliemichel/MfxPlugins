@@ -1,6 +1,6 @@
 # This file is part of MfxPlugins
 #
-# Copyright (c) 2019 - 2020 -- Élie Michel <elie.michel@exppad.com>
+# Copyright (c) 2019 -- Élie Michel <elie.michel@exppad.com>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the “Software”), to
@@ -20,5 +20,13 @@
 # from, out of or in connection with the software or the use or other dealings
 # in the Software.
 
-add_subdirectory(MfxTranslate)
-add_subdirectory(MfxExtrude)
+add_openmfx_plugin(
+  MfxRemoveDoubles
+  SRC
+    KDTree.h
+    KDTree.cpp
+    plugin.cpp
+  LIBS
+    OpenMfx::Sdk::Cpp::Plugin
+  TREAT_WARNINGS_AS_ERRORS
+)

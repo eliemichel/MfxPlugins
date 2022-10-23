@@ -1,6 +1,6 @@
 # This file is part of MfxPlugins
 #
-# Copyright (c) 2019 -- Élie Michel <elie.michel@exppad.com>
+# Copyright (c) 2019 - 2022 -- Élie Michel <elie.michel@exppad.com>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the “Software”), to
@@ -20,27 +20,11 @@
 # from, out of or in connection with the software or the use or other dealings
 # in the Software.
 
-set(INC
-  .
+add_openmfx_plugin(
+  MfxExtrude
+  SRC
+    plugin.cpp
+  LIBS
+    OpenMfx::Sdk::Cpp::Plugin
+  TREAT_WARNINGS_AS_ERRORS
 )
-
-set(SRC
-  KDTree.h
-  KDTree.cpp
-  MfxMesh.h
-  MfxMesh.cpp
-  MfxPlugin.h
-  MfxPlugin.cpp
-  plugin.cpp
-)
-
-set(LIB
-  openmesheffect_openfx
-  openmesheffect_util
-)
-
-add_library(MfxRemoveDoubles SHARED ${SRC})
-
-target_include_directories(MfxRemoveDoubles PRIVATE ${INC})
-target_link_libraries(MfxRemoveDoubles PRIVATE ${LIB})
-set_target_properties(MfxRemoveDoubles PROPERTIES SUFFIX ".ofx")

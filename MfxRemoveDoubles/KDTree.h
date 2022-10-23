@@ -26,16 +26,16 @@
 
 #include <vector>
 
-typedef float Real;
-
 struct kd_node_t{
-    Real *p; // pointer to data pool
+	char* p; // pointer to data pool
     struct kd_node_t *left, *right;
 };
 
 class KDTree {
 public:
-    KDTree(int point_count, Real *point_data, int stride = 3);
+	using Real = float;
+
+    KDTree(int point_count, char*point_data, int stride = 3);
 
 	/**
 	 * Get the nearest point (useless as is, it will return the target point
@@ -50,7 +50,7 @@ public:
 	int equivalent(int point_index, Real radius);
 
 private:
-	Real *m_point_data;
+	char *m_point_data;
     std::vector<struct kd_node_t> m_nodes;
     struct kd_node_t *m_root;
     int m_stride;
