@@ -1,6 +1,6 @@
 # This file is part of MfxPlugins
 #
-# Copyright (c) 2019 -- Élie Michel <elie.michel@exppad.com>
+# Copyright (c) 2019-2022 -- Élie Michel <elie.michel@exppad.com>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the “Software”), to
@@ -23,4 +23,9 @@
 cmake_minimum_required(VERSION 3.0)
 project(MfxPlugins)
 
-add_subdirectory(src)
+include(cmake/dependencies.cmake)
+include(cmake/utils.cmake)
+
+add_subdirectory(MfxExtrude)
+add_subdirectory(MfxRemoveDoubles)
+add_subdirectory(MfxTranslate)

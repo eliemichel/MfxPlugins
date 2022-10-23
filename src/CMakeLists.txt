@@ -23,5 +23,7 @@
 add_library(openmesheffect_openfx INTERFACE)
 target_include_directories(openmesheffect_openfx INTERFACE openfx)
 
+add_subdirectory(External)
 add_subdirectory(util)
+add_subdirectory(CppPluginSupport)
 add_subdirectory(plugins)
