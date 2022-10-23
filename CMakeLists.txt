@@ -23,6 +23,8 @@
 cmake_minimum_required(VERSION 3.0)
 project(MfxPlugins)
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 include(cmake/dependencies.cmake)
 include(cmake/utils.cmake)
 
