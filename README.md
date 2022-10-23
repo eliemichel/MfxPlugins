@@ -33,14 +33,14 @@ cmake --build . --config Debug
 
 The output of the build is not an executable. It is a set of OpenFX plug-ins called `MfxSomething.ofx`. They are created within the `build` directory, in `src` or `src/Debug` or `src/Release` or something similar depending on your compiler.
 
-You can open this plug-in in any Open Mesh Effect host, for instance the [Open Mesh Effect for Blender branch](https://github.com/eliemichel/OpenMfxForBlender) using an *OpenMfx modifier* or an *OpenMfx Geometry Node*.
+You can open this plug-in in any OpenMfx host, for instance the [OpenMfx for Blender branch](https://github.com/eliemichel/OpenMfxForBlender) using an *OpenMfx modifier* or an *OpenMfx Geometry Node*.
 
 ### License
 
 This software as a whole is released under the terms of the MIT License.
 
 ```
-MfxPlugins is a set of simple Open Mesh Effect plug-ins.
+MfxPlugins is a set of simple OpenMfx plug-ins.
 
 Copyright (c) 2019-2022 -- Élie Michel <elie.michel@exppad.com>
 
